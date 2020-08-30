@@ -1,0 +1,27 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract MedicalShop{
+    string CostumerId; 
+    string Tabletname;
+    int    tablets;
+    int    money;
+    
+    function MedicalShop( string newCostumerId, string newTabletname , int newTablets, int newMoney) public {
+        
+       
+        CostumerId = newCostumerId;
+        Tabletname = newTabletname;
+        tablets = newTablets;
+        money = newMoney;
+        
+    }
+    function getMedicalShop() public view returns(string,string,int,int) {
+        return( CostumerId,Tabletname, tablets, money);
+    }
+    function setMedicalShop( string newCostumerId,string newTabletname,int newTablets, int newMoney) public{
+           
+            CostumerId  = newCostumerId;
+            Tabletname = newTabletname;
+            tablets = newTablets;
+            money = newMoney;
+    }
+}
